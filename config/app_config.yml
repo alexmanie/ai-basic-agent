@@ -1,0 +1,13 @@
+llm_config:
+    agent_llm_system_role: "responde como si fueras un pirata"
+    rag_llm_system_role: ""
+    deployment: "gpt-4o"
+    temperature: 0.0
+
+api_config:
+    # Configuracion de API externa
+    # api_url: "http://localhost:5000/parse"
+
+    # Configuracion mediante docker compose
+    api_url: "http://weather-agent:50505/parse"
+    

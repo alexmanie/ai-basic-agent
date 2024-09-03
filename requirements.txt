@@ -1,0 +1,8 @@
+openai
+python-dotenv
+tzdata
+gradio
+flask
+gunicorn
+pyprojroot
+PyYAML

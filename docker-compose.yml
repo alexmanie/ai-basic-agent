@@ -1,0 +1,27 @@
+services:
+  gradio:
+    build:
+      context: .
+      dockerfile: dev-front.Dockerfile
+    container_name: weather-gradio
+    ports:
+      - 8080:7860
+    depends_on:
+      - weather-agent
+    networks:
+      - app-network
+  
+  weather-agent:
+    build:
+      context: .
+      dockerfile: dev-api.Dockerfile
+    container_name: weather-agent
+    ports:
+      - 5000:50505
+    networks:
+      app-network:
+        aliases:
+          - agent-app
+  
+networks:
+  app-network:
